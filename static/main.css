@@ -1,0 +1,121 @@
+/* Base reset and transitions */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  /* Background image for light mode */
+  background: url("/static/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.chatbox {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 90%;
+  max-width: 350px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #0077b6;
+}
+
+#toggleMode {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#toggleMode:hover {
+  background: #0056b3;
+}
+
+input {
+  width: 100%;
+  padding: 0.7rem;
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.7rem 1.5rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.response-box {
+  margin-bottom: 1rem;
+  min-height: 1.5rem;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* === DARK MODE STYLES === */
+body.dark-mode {
+  /* Optionally, use a different background image for dark mode */
+  background: url("/static/background_dark.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #eee;
+}
+
+body.dark-mode .chatbox {
+  background: rgba(30, 30, 30, 0.95);
+  color: #eee;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode input {
+  background: #2a2a2a;
+  color: #eee;
+  border: 1px solid #555;
+}
+
+body.dark-mode .response-box {
+  color: #ccc;
+}
+
+body.dark-mode button {
+  background: #0d6efd;
+}
+
+body.dark-mode button:hover {
+  background: #0a58ca;
+}
+
+body.dark-mode #toggleMode {
+  background: #0d6efd;
+  color: #fff;
+}

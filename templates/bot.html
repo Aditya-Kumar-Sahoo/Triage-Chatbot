@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Triage Chatbot</title>
+  <link rel="stylesheet" href="/static/main.css" />
+</head>
+<body>
+  <div class="chatbox">
+    <div class="header">
+      <h2>Triage Chatbot</h2>
+      <!-- This button toggles light/dark mode -->
+      <button id="toggleMode" onclick="toggleDarkMode()">Change Mode</button>
+    </div>
+    <div id="response" class="response-box">Enter symptoms to get started</div>
+    <input type="text" id="symptoms" placeholder="e.g. fever, chest pain" />
+    <button onclick="sendSymptoms()">Predict</button>
+  </div>
+  <script src="/static/main.js"></script>
+</body>
+</html>
